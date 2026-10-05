@@ -1,21 +1,10 @@
-import { P2pTransactions } from "../../../components/P2pTransactions";
-import { SendCard } from "../../../components/SendCard";
+import { Transfer } from "./Transfer";
 
-export default function Transfer({
-    transactions,
-    userId
-}: {
-    transactions: any;
-    userId: number;
-}) {
+export default function Page() {
     return (
-        <div className="w-full">
-            <SendCard />
-
-            <P2pTransactions
-                transactions={transactions}
-                userId={userId}
-            />
-        </div>
+        <Transfer
+            transactions={[]}
+            userId={1}
+        />
     );
 }
